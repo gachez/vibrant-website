@@ -4,7 +4,7 @@
 Vibrant Agency
 </title>
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">  
- <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans|Oswald&display=swap" rel="stylesheet"> 
+ <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans|Oswald&display=swap|Lexend+Mega&display=swap" rel="stylesheet"> 
      
 <style>
     body{
@@ -12,21 +12,27 @@ Vibrant Agency
         padding: 0;
         display: grid;
         grid-gap: 20px;
+        background-color: rgb(199, 209, 205,0.7);
     }
 
-    .menu{
-        font-family: 'Merriweather Sans';
-        font-size: 30px;
-        font-weight: normal;
-        width: 100%;
-        height: 80px;
-        z-index: 1;
-        display: grid;
-        grid-template-columns: repeat(5,1fr)
+    #logo{
+        margin: 20px;    
     }
     
-    .menu span{
+    .menu{
+        font-family: 'Lexend Mega', sans-serif;
+        font-weight: normal;
+        width: 100%;
+        height: 95px;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 60% 40%;
+        background-color: rgb(63, 181, 136,0.6);
+    }
+    
+    #menu span{
         text-align: center;
+        font-size: 20px;
         line-height: 80px;
         color:  black;
         cursor: pointer;
@@ -38,11 +44,13 @@ Vibrant Agency
         display: flex; 
         width: 100vw; 
         height: 100vh;
+        
    
     }
     
       
      #block-1{
+    
         width: 50vw;
         height: 95vh;
         align-self: center;
@@ -50,8 +58,10 @@ Vibrant Agency
     }
     
      #block-2{
+     
         width: 50vw;
-        height: 90vh;
+        height: 70vh;
+         align-self: center;
         
     }
     
@@ -65,6 +75,7 @@ Vibrant Agency
     }
     
      #block-3{
+      
         width: 50vw;
         height: 65vh;
         align-self: center;
@@ -74,6 +85,7 @@ Vibrant Agency
     
     
     #block-4{
+      
         width: 50vw;
         height: 95vh;
         grid-area: 'b';
@@ -115,23 +127,33 @@ Vibrant Agency
     
     }
     
+    #contact-block{
+        width: 100vw;
+        height: 40vh;
+        background-color: rgb(63, 181, 136,0.6);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 </style>    
 </head>
 <body>
 
 <nav class="menu">
-    <span>Home</span>
+    <img id="logo" src="images/logo-small-black.png"/>
+   <div id="menu">
+     <span>Home</span>
     <span>About Us</span>
     <span>Services</span>
     <span>Our Clients</span>
     <span>Contact Us</span>
+    </div>
 </nav>    
     
 <div id="first-container">
 
     
     <img id="block-1" src="images/profile.jpg" class="animated forwards fadeIn delay-1.9s" />    
-    <img id="block-2" src="images/vibrant-home.jpg" class="animated forwards slideInLeft delay-1.5s"/>    
+    <img id="block-2" src="images/about-us.jpg" class="animated forwards slideInLeft delay-1.5s"/>    
     
 </div>    
     
@@ -139,7 +161,7 @@ Vibrant Agency
 <div id="second-container" >
 
     
-    <img id="block-3" src="images/about-us.jpg" class="animated forwards slideInUp delay-2s" />    
+    <img id="block-3" src="images/computer.jpg" class="animated forwards slideInUp delay-2s" />    
     <img  id="block-4" src="images/about.jpg" class="animated forwards slideInUp delay-3s"/>    
 
 </div>    
@@ -167,7 +189,24 @@ Vibrant Agency
     
 </div>    
    
+<div id="contact-block">
+    <div id="bottom-nav">
+        <span>Home</span>
+        <span>About Us</span>
+        <span>Services</span>
+        <span>Our Clients</span>
+        <span>Contact</span>
+    </div>
     
+    <div> 
+        <span>Tel: 000000000000000</span>
+        <span>Email: kpacpkacspokacpkascpkp</span>
+    </div>
+    
+    <div>
+        <span>Site by Tengeza Studios</span>
+    </div>
+    </div>    
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>   
 <script>
     
