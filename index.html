@@ -1,0 +1,215 @@
+<html>
+<head>
+<title>
+Vibrant Agency
+</title>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">  
+ <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans|Oswald&display=swap" rel="stylesheet"> 
+     
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-gap: 20px;
+    }
+
+    .menu{
+        font-family: 'Merriweather Sans';
+        font-size: 30px;
+        font-weight: normal;
+        width: 100%;
+        height: 80px;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: repeat(5,1fr)
+    }
+    
+    .menu span{
+        text-align: center;
+        line-height: 80px;
+        color:  black;
+        cursor: pointer;
+        padding: 20px;
+        
+    }
+    
+    #first-container{
+        display: flex; 
+        width: 100vw; 
+        height: 100vh;
+   
+    }
+    
+      
+     #block-1{
+        width: 50vw;
+        height: 95vh;
+        align-self: center;
+        
+    }
+    
+     #block-2{
+        width: 50vw;
+        height: 90vh;
+        
+    }
+    
+     #second-container{
+        display: grid;
+        grid-gap: 50px; 
+        grid-template-areas: 'a b'; 
+        width: 100vw; 
+        height: 100vh;
+   
+    }
+    
+     #block-3{
+        width: 50vw;
+        height: 65vh;
+        align-self: center;
+        grid-area: 'a';
+     
+    }
+    
+    
+    #block-4{
+        width: 50vw;
+        height: 95vh;
+        grid-area: 'b';
+        align-self: center;
+    }
+    
+    
+    #third-container{
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    
+       
+
+    #block-5{
+           width: 50vw;
+        height: 100vh;
+        object-fit: contain;    
+    }
+    
+    .block-6{
+        width: 50vw;
+        margin: 50px;
+        height: 85vh;
+        align-self: center;
+        display: none;
+    }
+    
+    
+    #fourth-container{
+        width: 100vw;
+        height: 100vh;
+        background-image: url(images/client.jpg);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    
+    }
+    
+</style>    
+</head>
+<body>
+
+<nav class="menu">
+    <span>Home</span>
+    <span>About Us</span>
+    <span>Services</span>
+    <span>Our Clients</span>
+    <span>Contact Us</span>
+</nav>    
+    
+<div id="first-container">
+
+    
+    <img id="block-1" src="images/profile.jpg" class="animated forwards fadeIn delay-1.9s" />    
+    <img id="block-2" src="images/vibrant-home.jpg" class="animated forwards slideInLeft delay-1.5s"/>    
+    
+</div>    
+    
+
+<div id="second-container" >
+
+    
+    <img id="block-3" src="images/about-us.jpg" class="animated forwards slideInUp delay-2s" />    
+    <img  id="block-4" src="images/about.jpg" class="animated forwards slideInUp delay-3s"/>    
+
+</div>    
+    
+
+<div id="third-container" >
+
+    
+    <img id="block-5" src="images/services.jpg" class="animated forwards slideInUp delay-1s"/>   
+
+
+    <img  src="images/brand-identity.jpg" style="" class="animated forwards fadeIn delay-.5s block-6" />    
+    <img  src="images/brand-lead.jpg" style="" class="animated forwards fadeIn delay-1.5s block-6" />    
+    <img  src="images/gtl.jpg" style="" class="animated forwards fadeIn delay-1.5s block-6" />    
+    <img  src="images/office-branding.jpg" style="" class="animated forwards fadeIn delay-1.5s block-6" />    
+    <img  src="images/tools.jpg" style="" class="animated forwards fadeIn delay-1.5s block-6" />    
+
+
+
+
+</div>     
+    
+<div id="fourth-container">
+    
+    
+</div>    
+   
+    
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>   
+<script>
+    
+        $(window).scroll(function (event) {
+                var scroll = $(window).scrollTop();
+                var secondContainer = document.getElementById('second-container')
+                var thirdContainer = document.getElementById('third-container')
+                var block1 = document.getElementById('block1')
+
+                // Do something
+                if(scroll > 950){
+
+                    secondContainer.style.display = "grid"
+
+                }
+
+                else if(scroll > 1600){
+                    thirdContainer.style.display = "flex"
+                }
+                else{
+                    console.log('not yet.')
+                }
+        });
+
+
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+              var i;
+              var x = document.getElementsByClassName("block-6");
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+              }
+              myIndex++;
+              if (myIndex > x.length) {myIndex = 1}    
+              x[myIndex-1].style.display = "block";  
+              setTimeout(carousel, 4000); // Change image every 2 seconds
+        }    
+
+    
+</script>  
+</body>
+
+</html>
